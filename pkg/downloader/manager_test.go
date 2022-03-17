@@ -320,7 +320,7 @@ func TestUpdateBeforeBuild(t *testing.T) {
 		RepositoryCache:  dir(),
 	}
 
-	// Update before Build. see issue: https://github.com/suryatech27-cloud/helm-oci/issues/7101
+	// Update before Build. see issue: https://github.com/suryatech27-cloud/helm/issues/7101
 	err = m.Update()
 	if err != nil {
 		t.Fatal(err)

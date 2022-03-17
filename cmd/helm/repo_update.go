@@ -70,7 +70,7 @@ func newRepoUpdateCmd(out io.Writer) *cobra.Command {
 
 	f := cmd.Flags()
 
-	// Adding this flag for Helm 3 as stop gap functionality for https://github.com/suryatech27-cloud/helm-oci/issues/10016.
+	// Adding this flag for Helm 3 as stop gap functionality for https://github.com/suryatech27-cloud/helm/issues/10016.
 	// This should be deprecated in Helm 4 by update to the behaviour of `helm repo update` command.
 	f.BoolVar(&o.failOnRepoUpdateFail, "fail-on-repo-update-fail", false, "update fails if any of the repository updates fail")
 

@@ -29,7 +29,7 @@ import (
 
 // Dependencies runs lints against a chart's dependencies
 //
-// See https://github.com/suryatech27-cloud/helm-oci/issues/7910
+// See https://github.com/suryatech27-cloud/helm/issues/7910
 func Dependencies(linter *support.Linter) {
 	c, err := loader.LoadDir(linter.ChartDir)
 	if !linter.RunLinterRule(support.ErrorSev, "", validateChartFormat(err)) {

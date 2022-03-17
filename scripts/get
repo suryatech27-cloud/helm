@@ -63,7 +63,7 @@ verifySupported() {
   local supported="darwin-amd64\nlinux-386\nlinux-amd64\nlinux-arm\nlinux-arm64\nlinux-ppc64le\nlinux-s390x\nwindows-amd64"
   if ! echo "${supported}" | grep -q "${OS}-${ARCH}"; then
     echo "No prebuilt binary for ${OS}-${ARCH}."
-    echo "To build from source, go to https://github.com/suryatech27-cloud/helm-oci"
+    echo "To build from source, go to https://github.com/suryatech27-cloud/helm"
     exit 1
   fi
 
@@ -76,7 +76,7 @@ verifySupported() {
 # checkDesiredVersion checks if the desired version is available.
 checkDesiredVersion() {
   if [ "x$DESIRED_VERSION" == "x" ]; then
-    # Pinning tag to v2.17.0 as per https://github.com/suryatech27-cloud/helm-oci/issues/9607
+    # Pinning tag to v2.17.0 as per https://github.com/suryatech27-cloud/helm/issues/9607
     TAG=v2.17.0
   else
     TAG=$DESIRED_VERSION
@@ -158,7 +158,7 @@ fail_trap() {
     else
       echo "Failed to install $PROJECT_NAME"
     fi
-    echo -e "\tFor support, go to https://github.com/suryatech27-cloud/helm-oci."
+    echo -e "\tFor support, go to https://github.com/suryatech27-cloud/helm."
   fi
   cleanup
   exit $result
@@ -185,7 +185,7 @@ help () {
   echo -e "\t[--no-sudo]  ->> install without sudo"
 }
 
-# cleanup temporary files to avoid https://github.com/suryatech27-cloud/helm-oci/issues/2977
+# cleanup temporary files to avoid https://github.com/suryatech27-cloud/helm/issues/2977
 cleanup() {
   if [[ -d "${HELM_TMP_ROOT:-}" ]]; then
     rm -rf "$HELM_TMP_ROOT"

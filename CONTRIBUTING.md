@@ -6,7 +6,7 @@ to help get your contribution accepted.
 ## Reporting a Security Issue
 
 Most of the time, when you find a bug in Helm, it should be reported using [GitHub
-issues](https://github.com/suryatech27-cloud/helm-oci/issues). However, if you are reporting a _security
+issues](https://github.com/suryatech27-cloud/helm/issues). However, if you are reporting a _security
 vulnerability_, please email a report to
 [cncf-helm-security@lists.cncf.io](mailto:cncf-helm-security@lists.cncf.io). This will give us a
 chance to try to fix the issue before it is exploited in the wild.
@@ -85,7 +85,7 @@ automated DCO check.
 
 Whether you are a user or contributor, official support channels include:
 
-- [Issues](https://github.com/suryatech27-cloud/helm-oci/issues)
+- [Issues](https://github.com/suryatech27-cloud/helm/issues)
 - Slack:
   - User: [#helm-users](https://kubernetes.slack.com/messages/C0NH30761/details/)
   - Contributor: [#helm-dev](https://kubernetes.slack.com/messages/C51E88VDG/)
@@ -103,7 +103,7 @@ specific upcoming bugfix or feature release could fall into one of two different
 `3.2.2` or `3.3.0`.
 
 Issues and PRs which are deemed backwards-incompatible may be added to the discussion items for
-Helm 4 with [label:v4.x](https://github.com/suryatech27-cloud/helm-oci/labels/v4.x). An issue or PR that we are not
+Helm 4 with [label:v4.x](https://github.com/suryatech27-cloud/helm/labels/v4.x). An issue or PR that we are not
 sure we will be addressing will not be added to any milestone.
 
 A milestone (and hence release) can be closed when all outstanding issues/PRs have been closed

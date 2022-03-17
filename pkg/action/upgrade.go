@@ -264,7 +264,7 @@ func (u *Upgrade) performUpgrade(ctx context.Context, originalRelease, upgradedR
 	current, err := u.cfg.KubeClient.Build(bytes.NewBufferString(originalRelease.Manifest), false)
 	if err != nil {
 		// Checking for removed Kubernetes API error so can provide a more informative error message to the user
-		// Ref: https://github.com/suryatech27-cloud/helm-oci/issues/7219
+		// Ref: https://github.com/suryatech27-cloud/helm/issues/7219
 		if strings.Contains(err.Error(), "unable to recognize \"\": no matches for kind") {
 			return upgradedRelease, errors.Wrap(err, "current release manifest contains removed kubernetes api(s) for this "+
 				"kubernetes version and it is therefore unable to build the kubernetes "+

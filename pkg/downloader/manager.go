@@ -102,7 +102,7 @@ func (m *Manager) Build() error {
 	// If using apiVersion v1, calculate the hash before resolve repo names
 	// because resolveRepoNames will change req if req uses repo alias
 	// and Helm 2 calculate the digest from the original req
-	// Fix for: https://github.com/suryatech27-cloud/helm-oci/issues/7619
+	// Fix for: https://github.com/suryatech27-cloud/helm/issues/7619
 	var v2Sum string
 	if c.Metadata.APIVersion == chart.APIVersionV1 {
 		v2Sum, err = resolver.HashV2Req(req)
@@ -118,7 +118,7 @@ func (m *Manager) Build() error {
 	if sum, err := resolver.HashReq(req, lock.Dependencies); err != nil || sum != lock.Digest {
 		// If lock digest differs and chart is apiVersion v1, it maybe because the lock was built
 		// with Helm 2 and therefore should be checked with Helm v2 hash
-		// Fix for: https://github.com/suryatech27-cloud/helm-oci/issues/7233
+		// Fix for: https://github.com/suryatech27-cloud/helm/issues/7233
 		if c.Metadata.APIVersion == chart.APIVersionV1 {
 			log.Println("warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...")
 			if v2Sum != lock.Digest {
@@ -312,7 +312,7 @@ func (m *Manager) downloadAll(deps []*chart.Dependency) error {
 		}
 
 		// Any failure to resolve/download a chart should fail:
-		// https://github.com/suryatech27-cloud/helm-oci/issues/1439
+		// https://github.com/suryatech27-cloud/helm/issues/1439
 		churl, username, password, insecureskiptlsverify, passcredentialsall, caFile, certFile, keyFile, err := m.findChartURL(dep.Name, dep.Version, dep.Repository, repos)
 		if err != nil {
 			saveError = errors.Wrapf(err, "could not find %s", churl)

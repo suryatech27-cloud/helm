@@ -246,7 +246,7 @@ func (s *Storage) Last(name string) (*rspb.Release, error) {
 // into a string with format:```<helm_storage_type>.<release_name>.v<release_version>```.
 // The storage type is prepended to keep name uniqueness between different
 // release storage types. An example of clash when not using the type:
-// https://github.com/suryatech27-cloud/helm-oci/issues/6435.
+// https://github.com/suryatech27-cloud/helm/issues/6435.
 // This key is used to uniquely identify storage objects.
 func makeKey(rlsname string, version int) string {
 	return fmt.Sprintf("%s.%s.v%d", HelmStorageType, rlsname, version)

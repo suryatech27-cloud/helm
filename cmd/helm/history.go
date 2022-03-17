@@ -162,7 +162,7 @@ func getReleaseHistory(rls []*release.Release) (history releaseHistory) {
 func formatChartname(c *chart.Chart) string {
 	if c == nil || c.Metadata == nil {
 		// This is an edge case that has happened in prod, though we don't
-		// know how: https://github.com/suryatech27-cloud/helm-oci/issues/1347
+		// know how: https://github.com/suryatech27-cloud/helm/issues/1347
 		return "MISSING"
 	}
 	return fmt.Sprintf("%s-%s", c.Name(), c.Metadata.Version)
@@ -171,7 +171,7 @@ func formatChartname(c *chart.Chart) string {
 func formatAppVersion(c *chart.Chart) string {
 	if c == nil || c.Metadata == nil {
 		// This is an edge case that has happened in prod, though we don't
-		// know how: https://github.com/suryatech27-cloud/helm-oci/issues/1347
+		// know how: https://github.com/suryatech27-cloud/helm/issues/1347
 		return "MISSING"
 	}
 	return c.AppVersion()

@@ -47,7 +47,7 @@ import (
 	"helm.sh/helm/v3/pkg/helmpath"
 )
 
-// See https://github.com/suryatech27-cloud/helm-oci/issues/10166
+// See https://github.com/suryatech27-cloud/helm/issues/10166
 const registryUnderscoreMessage = `
 OCI artifact references (e.g. tags) do not support the plus sign (+). To support
 storing semantic versions, Helm adopts the convention of changing plus (+) to
@@ -700,7 +700,7 @@ func (c *Client) Tags(ref string) ([]string, error) {
 	var tagVersions []*semver.Version
 	for _, tag := range registryTags {
 		// Change underscore (_) back to plus (+) for Helm
-		// See https://github.com/suryatech27-cloud/helm-oci/issues/10166
+		// See https://github.com/suryatech27-cloud/helm/issues/10166
 		tagVersion, err := semver.StrictNewVersion(strings.ReplaceAll(tag, "_", "+"))
 		if err == nil {
 			tagVersions = append(tagVersions, tagVersion)
