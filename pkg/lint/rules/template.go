@@ -71,7 +71,7 @@ func Templates(linter *support.Linter, values map[string]interface{}, namespace 
 	}
 
 	// lint ignores import-values
-	// See https://github.com/helm/helm/issues/9658
+	// See https://github.com/suryatech27-cloud/helm-oci/issues/9658
 	if err := chartutil.ProcessDependencies(chart, values); err != nil {
 		return
 	}
@@ -117,11 +117,11 @@ func Templates(linter *support.Linter, values map[string]interface{}, namespace 
 			continue
 		}
 
-		// NOTE: disabled for now, Refs https://github.com/helm/helm/issues/1463
+		// NOTE: disabled for now, Refs https://github.com/suryatech27-cloud/helm-oci/issues/1463
 		// Check that all the templates have a matching value
 		// linter.RunLinterRule(support.WarningSev, fpath, validateNoMissingValues(templatesPath, valuesToRender, preExecutedTemplate))
 
-		// NOTE: disabled for now, Refs https://github.com/helm/helm/issues/1037
+		// NOTE: disabled for now, Refs https://github.com/suryatech27-cloud/helm-oci/issues/1037
 		// linter.RunLinterRule(support.WarningSev, fpath, validateQuotes(string(preExecutedTemplate)))
 
 		renderedContent := renderedContentMap[path.Join(chart.Name(), fileName)]
@@ -147,7 +147,7 @@ func Templates(linter *support.Linter, values map[string]interface{}, namespace 
 
 				if yamlStruct != nil {
 					// NOTE: set to warnings to allow users to support out-of-date kubernetes
-					// Refs https://github.com/helm/helm/issues/8596
+					// Refs https://github.com/suryatech27-cloud/helm-oci/issues/8596
 					linter.RunLinterRule(support.WarningSev, fpath, validateMetadataName(yamlStruct))
 					linter.RunLinterRule(support.WarningSev, fpath, validateNoDeprecations(yamlStruct))
 
@@ -165,7 +165,7 @@ func Templates(linter *support.Linter, values map[string]interface{}, namespace 
 // unpredictable errors depending on whether the text is normalized before being passed
 // into the YAML parser. So we trap it here.
 //
-// See https://github.com/helm/helm/issues/8467
+// See https://github.com/suryatech27-cloud/helm-oci/issues/8467
 func validateTopIndentLevel(content string) error {
 	// Read lines until we get to a non-empty one
 	scanner := bufio.NewScanner(bytes.NewBufferString(content))
@@ -289,7 +289,7 @@ func validateNoReleaseTime(manifest []byte) error {
 }
 
 // validateMatchSelector ensures that template specs have a selector declared.
-// See https://github.com/helm/helm/issues/1990
+// See https://github.com/suryatech27-cloud/helm-oci/issues/1990
 func validateMatchSelector(yamlStruct *K8sYamlStruct, manifest string) error {
 	switch yamlStruct.Kind {
 	case "Deployment", "ReplicaSet", "DaemonSet", "StatefulSet":

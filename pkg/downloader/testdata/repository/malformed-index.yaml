@@ -7,7 +7,7 @@ entries:
       checksum: 0e6661f193211d7a5206918d42f5c2a9470b737d
       home: https://helm.sh/helm
       sources:
-        - https://github.com/helm/helm
+        - https://github.com/suryatech27-cloud/helm-oci
       version: 1.2.3
       description: Deploy a basic Alpine Linux pod
       keywords: []

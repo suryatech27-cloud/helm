@@ -116,7 +116,7 @@ func TestGoodChart(t *testing.T) {
 
 // TestHelmCreateChart tests that a `helm create` always passes a `helm lint` test.
 //
-// See https://github.com/helm/helm/issues/7923
+// See https://github.com/suryatech27-cloud/helm-oci/issues/7923
 func TestHelmCreateChart(t *testing.T) {
 	dir := t.TempDir()
 
@@ -141,7 +141,7 @@ func TestHelmCreateChart(t *testing.T) {
 }
 
 // lint ignores import-values
-// See https://github.com/helm/helm/issues/9658
+// See https://github.com/suryatech27-cloud/helm-oci/issues/9658
 func TestSubChartValuesChart(t *testing.T) {
 	m := All(subChartValuesDir, values, namespace, strict).Messages
 	if len(m) != 0 {

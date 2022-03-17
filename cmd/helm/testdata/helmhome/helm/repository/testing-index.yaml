@@ -8,7 +8,7 @@ entries:
       deprecated: true
       home: https://helm.sh/helm
       sources:
-        - https://github.com/helm/helm
+        - https://github.com/suryatech27-cloud/helm-oci
       version: 0.1.0
       appVersion: 1.2.3
       description: Deploy a basic Alpine Linux pod
@@ -22,7 +22,7 @@ entries:
       created: "2018-07-09T11:34:37.797864902Z"
       home: https://helm.sh/helm
       sources:
-        - https://github.com/helm/helm
+        - https://github.com/suryatech27-cloud/helm-oci
       version: 0.2.0
       appVersion: 2.3.4
       description: Deploy a basic Alpine Linux pod
@@ -36,7 +36,7 @@ entries:
       created: "2020-11-12T08:44:58.872726222Z"
       home: https://helm.sh/helm
       sources:
-        - https://github.com/helm/helm
+        - https://github.com/suryatech27-cloud/helm-oci
       version: 0.3.0-rc.1
       appVersion: 3.0.0
       description: Deploy a basic Alpine Linux pod

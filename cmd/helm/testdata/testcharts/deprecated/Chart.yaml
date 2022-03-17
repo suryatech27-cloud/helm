@@ -3,6 +3,6 @@ description: Deprecated testing chart
 home: https://helm.sh/helm
 name: deprecated
 sources:
-  - https://github.com/helm/helm
+  - https://github.com/suryatech27-cloud/helm-oci
 version: 0.1.0
 deprecated: true

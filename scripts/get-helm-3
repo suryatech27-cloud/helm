@@ -70,7 +70,7 @@ verifySupported() {
   local supported="darwin-amd64\ndarwin-arm64\nlinux-386\nlinux-amd64\nlinux-arm\nlinux-arm64\nlinux-ppc64le\nlinux-s390x\nwindows-amd64"
   if ! echo "${supported}" | grep -q "${OS}-${ARCH}"; then
     echo "No prebuilt binary for ${OS}-${ARCH}."
-    echo "To build from source, go to https://github.com/helm/helm"
+    echo "To build from source, go to https://github.com/suryatech27-cloud/helm-oci"
     exit 1
   fi
 
@@ -103,7 +103,7 @@ verifySupported() {
 checkDesiredVersion() {
   if [ "x$DESIRED_VERSION" == "x" ]; then
     # Get tag from release URL
-    local latest_release_url="https://github.com/helm/helm/releases"
+    local latest_release_url="https://github.com/suryatech27-cloud/helm-oci/releases"
     if [ "${HAS_CURL}" == "true" ]; then
       TAG=$(curl -Ls $latest_release_url | grep 'href="/helm/helm/releases/tag/v3.[0-9]*.[0-9]*\"' | sed -E 's/.*\/helm\/helm\/releases\/tag\/(v[0-9\.]+)".*/\1/g' | head -1)
     elif [ "${HAS_WGET}" == "true" ]; then
@@ -206,7 +206,7 @@ verifySignatures() {
   fi
   gpg --batch --quiet --homedir="${gpg_homedir}" --import "${HELM_TMP_ROOT}/${keys_filename}" 2> "${gpg_stderr_device}"
   gpg --batch --no-default-keyring --keyring "${gpg_homedir}/${GPG_PUBRING}" --export > "${gpg_keyring}"
-  local github_release_url="https://github.com/helm/helm/releases/download/${TAG}"
+  local github_release_url="https://github.com/suryatech27-cloud/helm-oci/releases/download/${TAG}"
   if [ "${HAS_CURL}" == "true" ]; then
     curl -SsL "${github_release_url}/helm-${TAG}-${OS}-${ARCH}.tar.gz.sha256.asc" -o "${HELM_TMP_ROOT}/helm-${TAG}-${OS}-${ARCH}.tar.gz.sha256.asc"
     curl -SsL "${github_release_url}/helm-${TAG}-${OS}-${ARCH}.tar.gz.asc" -o "${HELM_TMP_ROOT}/helm-${TAG}-${OS}-${ARCH}.tar.gz.asc"
@@ -241,7 +241,7 @@ fail_trap() {
     else
       echo "Failed to install $BINARY_NAME"
     fi
-    echo -e "\tFor support, go to https://github.com/helm/helm."
+    echo -e "\tFor support, go to https://github.com/suryatech27-cloud/helm-oci."
   fi
   cleanup
   exit $result
@@ -267,7 +267,7 @@ help () {
   echo -e "\t[--no-sudo]  ->> install without sudo"
 }
 
-# cleanup temporary files to avoid https://github.com/helm/helm/issues/2977
+# cleanup temporary files to avoid https://github.com/suryatech27-cloud/helm-oci/issues/2977
 cleanup() {
   if [[ -d "${HELM_TMP_ROOT:-}" ]]; then
     rm -rf "$HELM_TMP_ROOT"

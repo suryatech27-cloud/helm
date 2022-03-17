@@ -308,7 +308,7 @@ icon: https://example.com/64x64.png
 }
 
 // Test the order of file loading. The Chart.yaml file needs to come first for
-// later comparison checks. See https://github.com/helm/helm/pull/8948
+// later comparison checks. See https://github.com/suryatech27-cloud/helm-oci/pull/8948
 func TestLoadFilesOrder(t *testing.T) {
 	goodFiles := []*BufferedFile{
 		{

@@ -205,7 +205,7 @@ func TestPullCmd(t *testing.T) {
 				outdir,
 				filepath.Join(outdir, "config.json"),
 			)
-			// Create file or Dir before helm pull --untar, see: https://github.com/helm/helm/issues/7182
+			// Create file or Dir before helm pull --untar, see: https://github.com/suryatech27-cloud/helm-oci/issues/7182
 			if tt.existFile != "" {
 				file := filepath.Join(outdir, tt.existFile)
 				_, err := os.Create(file)
@@ -322,7 +322,7 @@ func TestPullWithCredentialsCmd(t *testing.T) {
 				outdir,
 				filepath.Join(outdir, "config.json"),
 			)
-			// Create file or Dir before helm pull --untar, see: https://github.com/helm/helm/issues/7182
+			// Create file or Dir before helm pull --untar, see: https://github.com/suryatech27-cloud/helm-oci/issues/7182
 			if tt.existFile != "" {
 				file := filepath.Join(outdir, tt.existFile)
 				_, err := os.Create(file)

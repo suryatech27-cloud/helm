@@ -31,7 +31,7 @@ Think of it like apt/yum/homebrew for Kubernetes.
 ## Install
 
 
-Binary downloads of the Helm client can be found on [the Releases page](https://github.com/helm/helm/releases/latest).
+Binary downloads of the Helm client can be found on [the Releases page](https://github.com/suryatech27-cloud/helm-oci/releases/latest).
 
 Unpack the `helm` binary and add it to your PATH and you are good to go!
 
@@ -54,7 +54,7 @@ Get started with the [Quick Start guide](https://helm.sh/docs/intro/quickstart/)
 
 ## Roadmap
 
-The [Helm roadmap uses GitHub milestones](https://github.com/helm/helm/milestones) to track the progress of the project.
+The [Helm roadmap uses GitHub milestones](https://github.com/suryatech27-cloud/helm-oci/milestones) to track the progress of the project.
 
 ## Community, discussion, contribution, and support
 

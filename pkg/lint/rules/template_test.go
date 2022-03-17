@@ -257,7 +257,7 @@ data:
 // The template engine should not produce an error when a map in values.yaml does
 // not contain all possible keys.
 //
-// See https://github.com/helm/helm/issues/7483
+// See https://github.com/suryatech27-cloud/helm-oci/issues/7483
 func TestStrictTemplateParsingMapError(t *testing.T) {
 
 	ch := chart.Chart{
@@ -392,7 +392,7 @@ func TestValidateTopIndentLevel(t *testing.T) {
 }
 
 // TestEmptyWithCommentsManifests checks the lint is not failing against empty manifests that contains only comments
-// See https://github.com/helm/helm/issues/8621
+// See https://github.com/suryatech27-cloud/helm-oci/issues/8621
 func TestEmptyWithCommentsManifests(t *testing.T) {
 	mychart := chart.Chart{
 		Metadata: &chart.Metadata{

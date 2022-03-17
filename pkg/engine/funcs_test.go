@@ -54,7 +54,7 @@ func TestFuncs(t *testing.T) {
 		expect: "[one 2 map[name:helm]]",
 		vars:   `["one", 2, { "name": "helm" }]`,
 	}, {
-		// Regression for https://github.com/helm/helm/issues/2271
+		// Regression for https://github.com/suryatech27-cloud/helm-oci/issues/2271
 		tpl:    `{{ toToml . }}`,
 		expect: "[mast]\n  sail = \"white\"\n",
 		vars:   map[string]map[string]string{"mast": {"sail": "white"}},
